@@ -31,7 +31,7 @@ class ContactManager {
           accountSid:
               'ACca6fe7e468cd967f884bc13888497586', // replace *** with Account SID
           authToken:
-              'd5026a3956fcff3d9556049c868da130', // replace xxx with Auth Token
+              '419bf912b9a244938ccca336b6a27d3f', // replace xxx with Auth Token
           twilioNumber: '+15856693840' // replace .... with Twilio Number
           );
       String number = this.numbers[i];

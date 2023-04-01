@@ -4,9 +4,10 @@ import 'contactManager.dart';
 import 'contactView.dart';
 import 'package:shake/shake.dart';
 import 'MessageButton.dart';
+import 'models/homepage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyOtherApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -67,6 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MyOtherApp()),
+          );
+        },
+      ),
       appBar: AppBar(
         title: Text(widget.title),
       ),
