@@ -4,6 +4,8 @@ import 'contactManager.dart';
 import 'contactView.dart';
 import 'package:shake/shake.dart';
 import 'MessageButton.dart';
+import 'voiceDetection.dart';
+import 'cardPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Yukti'),
     );
   }
 }
@@ -67,6 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => VoiceDetectionClass()));
+        },
+      ),
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -77,6 +85,16 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CardPage(),
+                    ),
+                  );
+                },
+                child: Text('Go to Card Page'),
+              ),
               MessageButton(CM),
               contactView(CM: CM),
             ],

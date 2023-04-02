@@ -49,6 +49,9 @@ dependencies:
   geolocator: ^9.0.2
   twilio_flutter: ^0.0.9
   http: ^0.13.5
+  flutter_phone_direct_caller: ^2.1.1
+  permission_handler: ^10.2.0
+  speech_to_text: ^6.1.1
 
 dev_dependencies:
   flutter_test:
