@@ -15,6 +15,7 @@ class MessageButton extends StatelessWidget {
     String location = await CM.getGoogleMapsUrlWithCurrentLocation();
     String message = "I am in danger, please help me at $location";
     TwilioFlutter twilioFlutter;
+    print("hello");
     for (int i = 0; i < CM.numbers.length; i++) {
       twilioFlutter = TwilioFlutter(
           accountSid:
@@ -24,6 +25,7 @@ class MessageButton extends StatelessWidget {
           twilioNumber: '+15856693840' // replace .... with Twilio Number
           );
       String number = CM.numbers[i];
+      print("hello");
 
       twilioFlutter.sendSMS(toNumber: '+91$number', messageBody: '$message');
       String sheetyAPIKey =
